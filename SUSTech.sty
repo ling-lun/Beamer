@@ -16,6 +16,10 @@
 \setCJKsansfont{Source Han Sans SC}
 \setCJKmonofont{Source Han Sans SC}
 
+% 设置西文字体也使用思源黑体（让数字和英文与中文字体统一）
+\setmainfont{Source Han Sans SC}
+\setsansfont{Source Han Sans SC}
+
 % ============================================================================
 % 基础设置
 % ============================================================================
@@ -35,6 +39,9 @@
 % - footline=authorinstitutetitle: 页脚显示作者、机构、标题
 % - subsection=false: 不在导航栏显示小节
 \useoutertheme[footline=authorinstitutetitle,subsection=false]{smoothbars}
+
+% 隐藏顶部导航栏
+\setbeamertemplate{headline}{}
 
 % ============================================================================
 % 自定义页脚模板 - 显示作者、机构、标题和页码
@@ -78,8 +85,8 @@
 % 内部主题设置 (Inner Theme) - 控制内容元素样式
 % ============================================================================
 
-% 使用 circles 内部主题：列表项目符号为圆形
-\useinnertheme{circles}
+% 使用 rectangles 内部主题：列表项目符号为方形
+\useinnertheme{rectangles}
 
 %\useoutertheme{default}
 %\useinnertheme[shadow=true]{rounded}
@@ -107,6 +114,7 @@
 
 % --- 字体设置 ---
 \setbeamerfont{frametitle}{size=\large}                 % 标题字号
+\setbeamerfont{date}{size=\small}                       % 日期字号（较小）
 
 % --- 模板设置 ---
 %\setbeamertemplate{navigation symbols}{}               % 取消注释可隐藏导航符号
